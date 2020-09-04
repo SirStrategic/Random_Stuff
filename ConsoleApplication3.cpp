@@ -1,3 +1,4 @@
+//just the function
 std::vector<std::string> parseArgs(std::string args) {
 	std::vector<std::string> seperatedArgs;
 	if (args.size() == 0) {
@@ -65,9 +66,7 @@ std::vector<std::string> parseArgs(std::string args) {
 			deliminers.push_back(i);
 		}
 	}
-	//now to actualy cut out the variables
-	//alot of boilerplate but oh well
-	//return seperatedArgs;
+	
 	if (deliminers.empty()) {
 
 		seperatedArgs.push_back(args);
