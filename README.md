@@ -1,7 +1,6 @@
 # Simple-String-Parsing
 
-...
-
+***
 Reasons you would want to use this:
 none
 
