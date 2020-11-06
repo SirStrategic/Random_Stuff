@@ -15,7 +15,7 @@ Disclaimer: This is probably not thread and/or exception safe as I have no clue 
 ***
 ## Search-And-Replace
 
-This is another thing I've just descided to upload, it's a tool (if it's even complete enough to call it that) that finds and replaces items in a string while remembering what it's already edited so it doesn't edited alread edited text. Probably usless but I've just copy pasted a cursed comandline program I made to owo text with edited "Targets" to demonstrate the functionality. This is probably inneficient as hell but I have no way of making it better so deal with it.
+This is another thing I've just descided to upload, it's a tool (if it's even complete enough to call it that) that finds and replaces items in a string while remembering what it's already edited so it doesn't edit alread edited text. Probably usless but I've just copy pasted a cursed comandline program I made to owo text with edited "Targets" to demonstrate the functionality. This is probably inneficient as hell but I have no way of making it better so deal with it.
 
 ***
-you're free to use anything here, I'd like credit but let's be real, you probably don't wanna use this shit.
+You're free to use anything here, I'd like credit but let's be real, you probably don't wanna use this shit.
