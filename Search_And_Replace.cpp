@@ -51,8 +51,6 @@ main(int argc, char *argv[]){
 
     for (int i = 0; i < TOTAL_TARGETS; ++i) {
         do {
-
-            std::cout << /*last_found =*/ str.find(find[i], last_found);
             last_found = str.find(find[i], last_found);
 
             if ((last_found == str.npos)) //if not found break or if edited break
