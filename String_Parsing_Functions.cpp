@@ -7,7 +7,6 @@ std::vector<std::string> parseArgs(std::string args) {
 	for (int i = 0; i < args.size(); ++i) {
 		if (isspace(args[i])) {
 			is_space = true;
-			//hopefully the compiler optimises this
 			if (i == 0) {
 				was_space = is_space;
 				continue;
@@ -21,7 +20,6 @@ std::vector<std::string> parseArgs(std::string args) {
 			seperatedArgs.push_back(sb);
 			sb.clear();
 		}
-		//probably the most efficient way
 		was_space = is_space;
 	}
 }
@@ -29,17 +27,15 @@ std::vector<std::string> parseArgs(std::string args) {
 //second function
 char** parseArgs(const char* args) {
 	char** seperatedArgs = (char**)malloc(1 * sizeof(char*));
-	int sas = 1; //seperatedArgs size
-	char* sb = (char*)malloc(1 * sizeof(char)); //String Builder 
+	int sas = 1; 
+	char* sb = (char*)malloc(1 * sizeof(char)); 
 	int sbs = 1; //sb size
 	bool was_space = false;
 	bool is_space = false;
 	for (int i = 0; i < strlen(args); ++i) {
-	//check if space, if previous wasn't then push string abck
 
 		if (isspace(args[i])) {
 			is_space = true;
-			//hopefully the compiler optimises this
 			if (i == 0) {
 				was_space = is_space;
 				continue;
@@ -53,17 +49,13 @@ char** parseArgs(const char* args) {
 			is_space = false;
 		}
 		if ((!was_space) && is_space) {
-			//null terminate
 			sb[sbs - 1] = '\0';
-			//erm
 			++sas;
 			seperatedArgs = (char**)realloc(seperatedArgs, sas * sizeof(char*));
 			seperatedArgs[sas - 2] = sb;
-			//now pointer has been transfored to seperatedArgs I can reassign
 			sb = (char*)malloc(1);
 			sbs = 1;
 		}
-		//probably the most efficient way
 		was_space = is_space;
 	}
 	return seperatedArgs;
